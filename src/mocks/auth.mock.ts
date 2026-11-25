@@ -5,7 +5,7 @@ import type {
   Sessao,
   Usuario,
 } from '@/features/conta/types/conta';
-import { db, erroMock, proximoId, simularRede, UsuarioRegistro } from '@/mocks/db';
+import { db, erroMock, proximoId, simularRede, type UsuarioRegistro } from './db';
 
 const semSenha = ({ senha: _senha, ...usuario }: UsuarioRegistro): Usuario => usuario;
 const tokenFalso = (id: number) => `token-mock-${id}-${Date.now()}`;
