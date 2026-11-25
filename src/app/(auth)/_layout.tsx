@@ -4,10 +4,6 @@ import { useAuthStore } from '@/stores/authStore';
 
 export default function AuthLayout() {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
-
-  if (isAuthenticated) {
-    return <Redirect href="/" />;
-  }
-
+  if (isAuthenticated) return <Redirect href="/" />;
   return <Stack screenOptions={{ headerShown: false }} />;
 }
