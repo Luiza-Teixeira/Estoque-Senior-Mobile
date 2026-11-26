@@ -41,6 +41,12 @@
         "projectId": "aa11cfe1-ad58-4f45-9f31-d07a14e4129f"
       }
     },
-    "owner": "pdm_26.2-unicap"
+    "owner": "pdm_26.2-unicap",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/aa11cfe1-ad58-4f45-9f31-d07a14e4129f"
+    }
   }
 }
