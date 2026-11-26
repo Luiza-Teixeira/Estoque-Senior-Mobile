@@ -16,7 +16,8 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.pdm262unicap.estoquesenior"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -41,6 +42,12 @@
         "projectId": "aa11cfe1-ad58-4f45-9f31-d07a14e4129f"
       }
     },
-    "owner": "pdm_26.2-unicap"
+    "owner": "pdm_26.2-unicap",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/aa11cfe1-ad58-4f45-9f31-d07a14e4129f"
+    }
   }
 }
