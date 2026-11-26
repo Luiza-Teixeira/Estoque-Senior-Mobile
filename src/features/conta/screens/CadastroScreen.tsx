@@ -16,7 +16,7 @@ const cadastroSchema = z
   .object({
     nome: z.string().trim().min(3, 'Digite seu nome completo.'),
     email: z.string().trim().email('Digite um e-mail válido. Ex.: maria@exemplo.com'),
-    senha: z.string().min(6, 'A senha precisa ter pelo menos 6 caracteres.'),
+    senha: z.string().min(8, 'A senha precisa ter pelo menos 8 caracteres.'),
     confirmarSenha: z.string(),
   })
   .refine((v) => v.senha === v.confirmarSenha, {
@@ -79,7 +79,7 @@ export function CadastroScreen() {
           obrigatorio
           icone="lock-outline"
           secureTextEntry
-          ajuda="Pelo menos 6 caracteres."
+          ajuda="Pelo menos 8 caracteres."
         />
         <FormTextField
           control={control}

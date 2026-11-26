@@ -30,6 +30,17 @@
     "scheme": "estoquesenior",
     "experiments": {
       "typedRoutes": false
-    }
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "aa11cfe1-ad58-4f45-9f31-d07a14e4129f"
+      }
+    },
+    "owner": "pdm_26.2-unicap"
   }
 }
