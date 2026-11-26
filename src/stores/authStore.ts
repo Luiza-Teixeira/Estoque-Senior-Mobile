@@ -41,6 +41,7 @@ interface AuthState {
   login: (dados: LoginInput, lembrar: boolean) => Promise<void>;
   cadastrar: (dados: CadastroInput) => Promise<void>;
   logout: () => Promise<void>;
+  limparSessao: () => Promise<void>;
   restaurarSessao: () => Promise<void>;
   atualizarUsuario: (usuario: Usuario) => void;
 }
@@ -78,6 +79,20 @@ export const useAuthStore = create<AuthState>((set, get) => ({
   },
 
   logout: async () => {
+    try {
+      await authService.logout();
+    } finally {
+      await armazenamento.apagar();
+
+      set({
+        usuario: null,
+        token: null,
+        isAuthenticated: false,
+      });
+    }
+  },
+
+  limparSessao: async () => {
     await armazenamento.apagar();
 
     set({
@@ -127,5 +142,5 @@ export const useAuthStore = create<AuthState>((set, get) => ({
 configurarToken(() => useAuthStore.getState().token);
 
 configurarSessaoExpirada(() => {
-  useAuthStore.getState().logout();
+  useAuthStore.getState().limparSessao();
 });

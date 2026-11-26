@@ -22,4 +22,8 @@ export const authService = {
     const { data } = await api.put<Usuario>('/usuarios/me', dados);
     return data;
   },
+
+  async logout(): Promise<void> {
+    await api.post('/auth/logout');
+  },
 };

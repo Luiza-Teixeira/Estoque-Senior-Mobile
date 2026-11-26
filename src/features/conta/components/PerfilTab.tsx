@@ -18,7 +18,7 @@ const perfilSchema = z
     email: z.string().trim().email('Digite um e-mail válido.'),
     novaSenha: z
       .string()
-      .refine((v) => v === '' || v.length >= 6, 'A senha precisa ter pelo menos 6 caracteres.'),
+      .refine((v) => v === '' || v.length >= 8, 'A senha precisa ter pelo menos 8 caracteres.'),
     confirmarSenha: z.string(),
   })
   .refine((v) => v.novaSenha === v.confirmarSenha, {
