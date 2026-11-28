@@ -116,6 +116,6 @@ As requisições são centralizadas na camada de serviços do projeto.
 | Integrante | RA |
 | --- | --- |
 | Dandália Teixeira | 00000860045 |
-| Victoria Beltrão | 00000850093 |
+| Victoria Beltrão | 00000859903 |
 | Jader Silva | 00000859896 |
 | José Guimarães | 00000855161 |
